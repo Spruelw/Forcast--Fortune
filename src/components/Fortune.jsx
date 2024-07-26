@@ -9,7 +9,7 @@ export default function Fortune() {
   return (
     <div className="fortune-container">
       <p className="fortune-click">Click to get a fortune</p>
-      <img onClick={getFortune} src="../../images/crystalBall.png" />
+      <img onClick={getFortune} src="../../images/crystalBall.png" alt="crystal ball"/>
       {selectedFortune != null ? <p>{selectedFortune}</p> : null}
     </div>
   );

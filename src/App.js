@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Hero from "./components/Hero";
 import Home from "./components/Home";
 import Forcast from "./components/Forcast";
-import Fortune from "./components/Fortune";
 import "./App.css";
 
 function App() {
