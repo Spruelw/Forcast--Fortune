@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Hero from "./components/Hero";
+import Home from "./components/Home";
+import Forcast from "./components/Forcast";
+import Fortune from "./components/Fortune";
+import "./App.css";
 
 function App() {
+  const [forcastData, setForcastData] = useState({});
+  useEffect(() => {
+    console.log("FD is ", forcastData);
+  }, [forcastData]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Hero forcastData={forcastData} setForcastData={setForcastData} />
+
+      {Object.keys(forcastData).length > 0 ? (
+        <Forcast forcastData={forcastData} setForcastData={setForcastData} />
+      ) : (
+        <Home />
+      )}
     </div>
   );
 }
