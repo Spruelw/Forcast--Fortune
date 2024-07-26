@@ -20,7 +20,7 @@ function Hero(props) {
 
     config.params.days = 7;
     var response = await axios.get(
-      "http://api.weatherbit.io/v2.0/forecast/daily",
+      "https://api.weatherbit.io/v2.0/forecast/daily",
       config
     );
 
