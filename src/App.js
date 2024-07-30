@@ -6,13 +6,11 @@ import "./App.css";
 
 function App() {
   const [forcastData, setForcastData] = useState({});
-  useEffect(() => {
-    console.log("FD is ", forcastData);
-  }, [forcastData]);
+ 
   return (
     <div className="App">
       <Hero forcastData={forcastData} setForcastData={setForcastData} />
-
+//home component if forcastData empty
       {Object.keys(forcastData).length > 0 ? (
         <Forcast forcastData={forcastData} setForcastData={setForcastData} />
       ) : (
