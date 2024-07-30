@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Hero from "./components/Hero";
 import Home from "./components/Home";
 import Forcast from "./components/Forcast";
