@@ -2,11 +2,7 @@ import Card from "./Card"
 import CurrentCard from "./CurrentCard"
 import { daysOfWeek } from "./daysOfWeek"
 import Fortune from "./Fortune"
-
-
-
-
-              
+       
 function createCard(item, index){
 var imgUrl = `https://cdn.weatherbit.io/static/img/icons/${item.weather.icon}.png`
     return (
@@ -21,10 +17,13 @@ var imgUrl = `https://cdn.weatherbit.io/static/img/icons/${item.weather.icon}.pn
 }
 
 export default function Forecast (props){
-    console.log(props)
+    
 var data = props.forcastData.data
+
+/*select first object as todayData */
 var todayData = data[0]
 
+/* filter out todayData*/
 var filteredData = data.filter((item) => item !== todayData )
     return (
         <div className="forcast-container">
@@ -44,8 +43,7 @@ var filteredData = data.filter((item) => item !== todayData )
               {filteredData.map((item, index) => {
                 return createCard(item)
                 })}
-             
-                
+                      
             </div>
              <Fortune />
         </div>
