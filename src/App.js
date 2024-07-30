@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Hero forcastData={forcastData} setForcastData={setForcastData} />
-/*home component if forcastData empty*/
+{/*home component if forcastData empty*/}
       {Object.keys(forcastData).length > 0 ? (
         <Forcast forcastData={forcastData} setForcastData={setForcastData} />
       ) : (
