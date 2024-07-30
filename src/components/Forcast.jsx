@@ -20,10 +20,10 @@ export default function Forecast (props){
     
 var data = props.forcastData.data
 
-{/* select first object as todayData */}
+/* select first object as todayData */
 var todayData = data[0]
 
-{/* filter out todayData */}
+/* filter out todayData */
 var filteredData = data.filter((item) => item !== todayData )
     return (
         <div className="forcast-container">
